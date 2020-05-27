@@ -10,11 +10,7 @@
             </figure>
           </div>
           <div class="col-md-6 col-md-offset-0 description">
-            <router-link
-              tag="h1"
-              :to="{ name : 'Id', params: {id: product.id}}">
-                {{product.title}}
-            </router-link>
+            <router-link tag="h1" :to="{ name : 'Id', params: {id: product.id}}" class="router-link">{{product.title}}</router-link>
             <p v-html="product.description"></p>
             <p class="price">
               {{product.price | formatPrice}}
@@ -33,9 +29,7 @@
             </span>
             <span class="inventory-message" v-else>Kupuj teraz!</span>
             <div class="rating">
-              <span  v-bind:class="{'rating-active' :checkRating(n, product)}" 
-                  v-for="n in 5" >☆
-              </span>
+              <span  v-bind:class="{'rating-active' :checkRating(n, product)}" v-for="n in 5" >☆</span>
             </div>
           </div><!-- koniec col-md-6 -->
         </div><!-- koniec row -->

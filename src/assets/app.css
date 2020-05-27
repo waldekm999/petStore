@@ -54,6 +54,11 @@ header h1{
   position: relative;
   width: 1.1em;
   }
+
+  .router-link:hover{
+    cursor: pointer;
+    color: blue;
+  }  
   
   @media (min-width: 1200px) {
     .container{

@@ -3,9 +3,7 @@
     <div class="navbar navbar-default">
       <div class="navbar-header">
         <h1>
-          <router-link :to="{name: 'iMain'}">
-            {{ sitename }}
-          </router-link>
+          <router-link :to="{name: 'iMain'}">{{ sitename }}</router-link>
         </h1>
       </div>
 
