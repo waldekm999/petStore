@@ -42,11 +42,11 @@
 
 <script>
   import MyHeader from './Header.vue';
+  //import {mapGetters} from 'vuex';
   export default {
     name: 'imain',
     data() {
-      return {
-        products: {},
+      return {        
         cart: []
       };
     },
@@ -91,6 +91,9 @@
           }
           return productsArray.sort(compare);
         }
+      },
+      products() {
+        return this.$store.getters.products;
       }
     },
     filters: {
@@ -113,10 +116,7 @@
       }
     },
     created: function() {
-      axios.get('/static/products.json').then(response => {
-        this.products = response.data.products;
-        // console.log(this.products);
-      });
+      this.$store.dispatch('initStore');
     }
   };
 </script>
